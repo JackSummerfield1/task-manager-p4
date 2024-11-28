@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-^)_@i6dqnyx8pj1#w=v83+_klujg8ib)2)gw$lrl-cpt*@%2k^
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-jacksummerf-taskmanager-f7ncp9islpg.ws.codeinstitute-ide.net']
+    '8000-jacksummerf-taskmanager-f7ncp9islpg.ws.codeinstitute-ide.net',
+    '.herokuapp.com']
 
 
 # Application definition
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'tasks',
 ]
 
 MIDDLEWARE = [
