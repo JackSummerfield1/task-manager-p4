@@ -54,7 +54,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 # This ensures that the user gets redirected to the login page
 # before gaining full access to website
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
