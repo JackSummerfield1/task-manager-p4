@@ -13,7 +13,7 @@ def task_list(request):
     tasks = Task.objects.all()
     return render(
         request,
-        'tasks/templates/tasks/task_list.html',
+        'tasks/task_list.html',
         {
             'tasks': tasks,
         }
