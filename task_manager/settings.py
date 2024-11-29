@@ -43,7 +43,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'tasks',
+]
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+# This ensures that the user gets redirected to the login page
+# before gaining full access to website
+LOGOUT_REDIRECT_URL = '/'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'allauth.account.auth_backends.AuthenticationBackend',  # Required by allauth
 ]
 
 MIDDLEWARE = [
@@ -54,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
@@ -115,6 +131,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Informs Django not to expect email verification during login and registration
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
