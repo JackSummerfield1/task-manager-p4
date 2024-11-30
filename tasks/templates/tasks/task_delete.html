@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<body>
-    <div class="container mt-4">
-        <h2>Are you sure you want to delete this task?</h2>
-        <p><strong>{{ task.title }}</strong></p>
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Yes, Delete</button>
-            <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
-        </form>
+<section class="gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-xl-10">
+                <div class="card mask-custom">
+                    <div class="card-body p-4 text-white">
+                        <div class="text-center pt-3 pb-2">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                                alt="Check" width="60">
+                            <h2 class="my-4">Are you sure you want to delete this task?</h2>
+                            <p class="my-4"><strong>{{ task.title }}</strong></p>
+                            <form method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-
+</section>
 {% endblock %}
