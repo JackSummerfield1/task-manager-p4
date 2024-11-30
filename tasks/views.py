@@ -12,7 +12,7 @@ from .forms import TaskForm
 
 @login_required
 def task_list(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user=request.user)
     return render(
         request,
         'tasks/task_list.html',
