@@ -3,20 +3,30 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
-<body>
-    <div class="container mt-4">
-        <h2>{% if form.instance.pk %}Edit{% else %}Create{% endif %} Task</h2>
-        <!-- If user is directed to edit page, 'Edit' head is used and the same with create -->
-        <form method="post">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Save{% endif %}
-                Task</button>
-            <!-- 'Update' button for editing and 'Save' button for creating -->
-        </form>
-        <a href="{% url 'task_list' %}" class="btn btn-secondary mt-3">Back to Task List</a>
+<section class="gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-xl-10">
+                <div class="card mask-custom">
+                    <div class="card-body p-4 text-white">
+                        <div class="text-center pt-3 pb-2">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                                alt="Check" width="60">
+                            <h2 class="my-4">{% if form.instance.pk %}Edit{% else %}Create{% endif %} Task</h2>
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ form | crispy }}
+                                <button type="submit"
+                                    class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Save{% endif %}
+                                    Task</button>
+                                <!-- 'Update' button for editing and 'Save' button for creating -->
+                            </form>
+                            <a href="{% url 'task_list' %}" class="btn btn-secondary mt-3">Back to Task List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-
+</section>
 {% endblock %}
