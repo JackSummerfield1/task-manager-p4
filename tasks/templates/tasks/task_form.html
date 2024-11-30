@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class="container mt-4">
+        <h2>{% if form.instance.pk %}Edit{% else %}Create{% endif %} Task</h2>
+        <!-- If user is directed to edit page, 'Edit' head is used and the same with create -->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Save{% endif %}
+                Task</button>
+            <!-- 'Update' button for editing and 'Save' button for creating -->
+        </form>
+        <a href="{% url 'task_list' %}" class="btn btn-secondary mt-3">Back to Task List</a>
+    </div>
+</body>
+
+{% endblock %}
