@@ -28,7 +28,7 @@
                     <td>{{ task.description }}</td>
                     <td>{{ task.deadline }}</td>
                     <td>{{ task.get_priority_display }}</td>
-                    <td>{{ task.completed }}</td>
+                    <td>{% if task.completed == True %}&#10003;{% else %}&#10007;{% endif %}</td>
                     <td>
                         <!-- Button to edit an existing task -->
                         <a href="{% url 'task_edit' task.pk %}
