@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <body>
@@ -8,7 +10,7 @@
         <!-- If user is directed to edit page, 'Edit' head is used and the same with create -->
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form | crispy }}
             <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Save{% endif %}
                 Task</button>
             <!-- 'Update' button for editing and 'Save' button for creating -->
