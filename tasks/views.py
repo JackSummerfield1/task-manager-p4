@@ -43,7 +43,9 @@ def task_edit(request, pk):
     if request.method == 'POST':
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
-            form.save()
+            edit_form = form.save(commit=False)
+            edit_form.user = request.user
+            edit_form.save()
             return redirect('task_list')
     else:
         form = TaskForm(instance=task)
