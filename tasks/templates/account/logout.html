@@ -5,17 +5,20 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+<section class="gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-10">
+        <div class="card mask-custom">
+          <div class="card-body p-4 text-white">
+            <div class="text-center pt-3 pb-2">
+              <!-- Credit to Code Institute here for the structure of the Login page, extracted from the Django walkthrough project (Codestar Blog) -->
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
-
-
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}
