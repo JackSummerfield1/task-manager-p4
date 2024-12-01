@@ -17,3 +17,16 @@ class TestTaskForm(TestCase):
             'completed': False
         })
         self.assertTrue(form.is_valid())
+
+    def test_form_is_invalid_with_no_title(self):
+        """
+        This tests that the form is invalid with no title
+        """
+        form = TaskForm({
+            'description': 'This is a test description',
+            'deadline': '2024-12-31 00:00:00',
+            'priority': 1,
+            'completed': False,
+        })
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors['title'], ['This field is required.'])
