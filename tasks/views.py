@@ -29,7 +29,7 @@ def task_create(request):
             create_form.user = request.user
             create_form.save()
             messages.add_message(
-                request, messages.SUCCESS, 'Task successfully added to existing list!'
+                request, messages.SUCCESS, 'Task successfully added to list!'
             )
             return redirect('task_list')
     else:
@@ -46,6 +46,9 @@ def task_edit(request, pk):
             edit_form = form.save(commit=False)
             edit_form.user = request.user
             edit_form.save()
+            messages.add_message(
+                request, messages.SUCCESS, 'Task successfully updated!'
+            )
             return redirect('task_list')
     else:
         form = TaskForm(instance=task)
@@ -57,5 +60,8 @@ def task_delete(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
         task.delete()
+        messages.add_message(
+            request, messages.SUCCESS, 'Task successfully deleted!'
+        )
         return redirect('task_list')
     return render(request, 'tasks/task_delete.html', {'task': task})
