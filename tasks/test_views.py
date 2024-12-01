@@ -27,7 +27,7 @@ class TestTaskViews(TestCase):
         self.assertNotEqual(response.status_code, 200)
 
         # Testing that the correct tasks are displayed
-        self.login()
+        self.login()  # Logging in the test user
         response = self.client.get(reverse('task_list'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'tasks/task_list.html')
@@ -38,7 +38,7 @@ class TestTaskViews(TestCase):
         # Should redirect to login page
         self.assertNotEqual(response.status_code, 200)
 
-        self.login()
+        self.login()  # Logging in the test user
         response = self.client.post(reverse('task_create'), {
             'title': 'task 1',
             'description': 'description 1',
@@ -48,3 +48,13 @@ class TestTaskViews(TestCase):
         })
         self.assertTrue(Task.objects.filter(
             title='task 1', user=self.user).exists())
+
+    def test_task_delete_view(self):
+        self.login()  # Logging in the test user
+
+        response = self.client.post(
+            reverse('task_delete', kwargs={'pk': self.task.pk}))
+        # Ensures that redirection happens
+        self.assertEqual(response.status_code, 302)
+        # Task should no longer be in the list
+        self.assertFalse(Task.objects.filter(pk=self.task.pk).exists())
