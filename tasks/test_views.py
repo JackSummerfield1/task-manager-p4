@@ -17,3 +17,10 @@ class TestTaskViews(TestCase):
         # Testing the login required feature
         response = self.client.get(reverse('task_list'))
         self.assertNotEqual(response.status_code, 200)
+
+        # Testing that the correct tasks are displayed
+        self.login()
+        response = self.client.get(reverse('task_list'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'tasks/task_list.html')
+        self.assertContains(response, 'test task')
