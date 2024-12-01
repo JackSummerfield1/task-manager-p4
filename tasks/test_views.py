@@ -20,9 +20,10 @@ class TestTaskViews(TestCase):
     def login(self):
         self.client.login(username='testSuperuser', password='testPassword')
 
-    def task_list_view_test(self):
+    def test_task_list_view(self):
         # Testing the login required feature
         response = self.client.get(reverse('task_list'))
+        # Should redirect to login page
         self.assertNotEqual(response.status_code, 200)
 
         # Testing that the correct tasks are displayed
@@ -31,3 +32,19 @@ class TestTaskViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'tasks/task_list.html')
         self.assertContains(response, 'test task')
+
+    def test_task_create_view(self):
+        response = self.client.get(reverse('task_create'))
+        # Should redirect to login page
+        self.assertNotEqual(response.status_code, 200)
+
+        self.login()
+        response = self.client.post(reverse('task_create'), {
+            'title': 'task 1',
+            'description': 'description 1',
+            'deadline': '2024-12-31 00:00:00',
+            'priority': 0,
+            'completed': False
+        })
+        self.assertTrue(Task.objects.filter(
+            title='task 1', user=self.user).exists())
