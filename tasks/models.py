@@ -10,7 +10,8 @@ class Task(models.Model):
     """
     Represents a task associated with a user in the task manager database.
 
-    - user (ForeignKey): Referring to the user who owns the task. Deletes all tasks associated to user if user is deleted from database.
+    - user (ForeignKey): Referring to the user who owns the task. Deletes all
+      tasks associated to user if user is deleted from database.
     - title (CharField): Title of the task
     - description (TextField): An optional description of the task.
     - deadline: An optional deadline for the task.

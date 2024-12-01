@@ -55,7 +55,8 @@ def task_edit(request, pk):
     Handles logged in users editing an existing task.
 
     Renders a form for editing the task. If the form is submitted 
-    and valid, the changes are saved and the user is redirected to the task list.
+    and valid, the changes are saved and the user
+    is redirected to the task list.
     """
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':

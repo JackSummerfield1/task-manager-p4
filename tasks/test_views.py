@@ -10,7 +10,8 @@ class TestTaskViews(TestCase):
         Set up the test environment by creating a test user and task.
         """
         self.user = User.objects.create_superuser(
-            username='testSuperuser', password='testPassword', email='test@email.com')
+            username='testSuperuser', password='testPassword',
+            email='test@email.com')
         self.task = Task.objects.create(
             user=self.user,
             title='test task',
@@ -28,7 +29,8 @@ class TestTaskViews(TestCase):
         Tests the task list view.
 
         - Ensures that users are redirected if not logged in
-        - Confirms that only tasks associated with the logged in user are displayed
+        - Confirms that only tasks associated with the logged
+        in user are displayed
         """
         # Testing the login required feature
         response = self.client.get(reverse('task_list'))
