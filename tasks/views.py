@@ -12,6 +12,12 @@ from .forms import TaskForm
 
 @login_required
 def task_list(request):
+    """
+    Display a list of tasks for the logged-in user.
+
+    Retrieves tasks belonging to the logged-in user and renders them 
+    in the 'task_list.html' template.
+    """
     tasks = Task.objects.filter(user=request.user)
     return render(
         request,
@@ -22,6 +28,12 @@ def task_list(request):
 
 @login_required
 def task_create(request):
+    """
+    Handles logged in users creating new tasks.
+
+    Renders a form for creating a new task. If the form is submitted 
+    and valid, the task is saved and the user is redirected to the task list.
+    """
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
@@ -39,6 +51,12 @@ def task_create(request):
 
 @login_required
 def task_edit(request, pk):
+    """
+    Handles logged in users editing an existing task.
+
+    Renders a form for editing the task. If the form is submitted 
+    and valid, the changes are saved and the user is redirected to the task list.
+    """
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
         form = TaskForm(request.POST, instance=task)
@@ -57,6 +75,12 @@ def task_edit(request, pk):
 
 @login_required
 def task_delete(request, pk):
+    """
+    Handles logged in users deleting an existing task.
+
+    Renders a confirmation page. If the user confirms by submitting 
+    the form, the task is deleted, and the user is redirected to the task list.
+    """
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
         task.delete()
