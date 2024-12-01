@@ -12,3 +12,8 @@ class TestTaskViews(TestCase):
 
     def login(self):
         self.client.login(username='testSuperuser', password='testPassword')
+
+    def task_list_view_test(self):
+        # Testing the login required feature
+        response = self.client.get(reverse('task_list'))
+        self.assertNotEqual(response.status_code, 200)
