@@ -20,14 +20,19 @@
                     <h3>{% trans "Sign In" %}</h3>
 
                     <p>{% blocktrans %}Welcome back to the Task Manager. To access the following features: </p>
-                    <ul>
-                      <li><i class="fa-solid fa-clipboard-list"></i>View Tasks</li>
-                      <li><i class="fa-solid fa-plus"></i>Create a Task</li>
-                      <li><i class="fa-solid fa-pencil"></i>Edit an Existing Task(s)</li>
-                      <li><i class="fa-solid fa-trash-can"></i>Delete an Existing Task(s)</li>
+                    <ul class="list-unstyled">
+                      <li><i class="fa-solid fa-clipboard-list fa-lg text-info"></i> <strong>View
+                        </strong>Tasks</li>
+                      <li><i class="fa-solid fa-plus fa-lg text-success"></i> <strong>Create</strong> a Task
+                      </li>
+                      <li><i class="fa-solid fa-pencil fa-lg text-warning"></i> <strong>Edit</strong> an Existing
+                        Task(s)</li>
+                      <li><i class="fa-solid fa-trash-can fa-lg text-danger"></i> <strong>Delete</strong> an Existing
+                        Task(s)</li>
                     </ul>
-                    <p>Please log in. If you have not created an account yet, then <a href="{{ signup_url }}">sign
-                        up</a>first.{% endblocktrans %}</p>
+                    <p><strong>PLEASE LOGIN BELOW</strong></p>
+                    <p>If you have not created an account yet, then <a class="link-info" href="{{ signup_url }}">sign
+                        up</a> first.{% endblocktrans %}</p>
 
 
                   </div>
