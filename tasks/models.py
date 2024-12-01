@@ -15,4 +15,4 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
 
     def __str__(self):
-        return
+        return f"{self.title} | Created by {self.user}"
