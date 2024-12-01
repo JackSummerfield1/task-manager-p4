@@ -13,7 +13,32 @@
         <div class="card mask-custom">
           <div class="card-body p-4 text-white">
             <div class="text-center pt-3 pb-2">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <h3>{% trans "Sign In" %}</h3>
 
+                    <p>{% blocktrans %}Welcome back to the Task Manager. To view, create, edit or delete a Task, please
+                      log
+                      in. If
+                      you
+                      have not created an account yet, then <a href="{{ signup_url }}">sign up</a>
+                      first.{% endblocktrans %}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <form method="POST" action="{% url 'account_login' %}">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      {% if redirect_field_value %}
+                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                      {% endif %}
+                      <button type="submit" class="btn btn-primary">{% trans "Sign In" %}</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
