@@ -25,7 +25,9 @@ def task_create(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-            form.save()
+            create_form = form.save(commit=False)
+            create_form.user = request.user
+            create_form.save()
             messages.add_message(
                 request, messages.SUCCESS, 'Task successfully added to existing list!'
             )

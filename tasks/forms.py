@@ -6,7 +6,7 @@ from .models import Task
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['user', 'title', 'description',
+        fields = ['title', 'description',
                   'deadline', 'priority', 'completed']
 
     # Full credit to Pretty Printed on how to style Django Form Fields,
