@@ -1,4 +1,4 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
@@ -13,7 +13,29 @@
           <div class="card-body p-4 text-white">
             <div class="text-center pt-3 pb-2">
               <!-- Credit to Code Institute here for the structure of the Login page, extracted from the Django walkthrough project (Codestar Blog) -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <h3>{% trans "Sign Up" %}</h3>
 
+                    <p>{% blocktrans %}Welcome back to the Task Manager. Do you already have an account? Then please
+                      <a class="link-info" href="{{ login_url }}">sign in</a>
+                      instead.{% endblocktrans %}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <form class="login" method="POST" action="{% url 'account_signup' %}">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      {% if redirect_field_value %}
+                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                      {% endif %}
+                      <button type="submit" class="btn btn-primary">{% trans "Sign Up" %}</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
