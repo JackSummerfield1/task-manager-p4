@@ -1,4 +1,4 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
@@ -12,8 +12,27 @@
         <div class="card mask-custom">
           <div class="card-body p-4 text-white">
             <div class="text-center pt-3 pb-2">
-              <!-- Credit to Code Institute here for the structure of the Login page, extracted from the Django walkthrough project (Codestar Blog) -->
+              <!-- Credit to Code Institute here for the structure of the Logout page, extracted from the Django walkthrough project (Codestar Blog) -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <h3>{% trans "Sign Out" %}</h3>
 
+                    <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 mt-3 offset-md-2">
+                    <form method="post" action="{% url 'account_logout' %}">
+                      {% csrf_token %}
+                      {% if redirect_field_value %}
+                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                      {% endif %}
+                      <button type="submit" class="btn btn-primary">{% trans "Sign Out" %}</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
