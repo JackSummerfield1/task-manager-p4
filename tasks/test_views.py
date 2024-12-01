@@ -6,6 +6,9 @@ from .models import Task
 
 class TestTaskViews(TestCase):
     def setUp(self):
+        """
+        Set up the test environment by creating a test user and task.
+        """
         self.user = User.objects.create_superuser(
             username='testSuperuser', password='testPassword', email='test@email.com')
         self.task = Task.objects.create(
@@ -21,6 +24,12 @@ class TestTaskViews(TestCase):
         self.client.login(username='testSuperuser', password='testPassword')
 
     def test_task_list_view(self):
+        """
+        Tests the task list view.
+
+        - Ensures that users are redirected if not logged in
+        - Confirms that only tasks associated with the logged in user are displayed
+        """
         # Testing the login required feature
         response = self.client.get(reverse('task_list'))
         # Should redirect to login page
@@ -34,6 +43,13 @@ class TestTaskViews(TestCase):
         self.assertContains(response, 'test task')
 
     def test_task_create_view(self):
+        """
+        Tests the task create view.
+
+        - Ensures that users are redirected if not logged in.
+        - Ensures that logged in users can create a new task.
+        - Confirms the task is saved to the database.
+        """
         response = self.client.get(reverse('task_create'))
         # Should redirect to login page
         self.assertNotEqual(response.status_code, 200)
@@ -50,6 +66,13 @@ class TestTaskViews(TestCase):
             title='task 1', user=self.user).exists())
 
     def test_task_delete_view(self):
+        """
+        Tests the task delete view.
+
+        - Ensures that users are redirected if not logged in.
+        - Ensures that logged in users can delete an existing task.
+        - Confirms the task is removed from the database.
+        """
         self.login()  # Logging in the test user
 
         response = self.client.post(
