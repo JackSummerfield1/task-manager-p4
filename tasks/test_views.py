@@ -8,7 +8,14 @@ class TestTaskViews(TestCase):
     def setUp(self):
         self.user = User.objects.create_superuser(
             username='testSuperuser', password='testPassword', email='test@email.com')
-        self.task = Task.objects.create(user=self.user, name='test task')
+        self.task = Task.objects.create(
+            user=self.user,
+            title='test task',
+            description='test description',
+            deadline=None,
+            priority=1,
+            completed=False
+        )
 
     def login(self):
         self.client.login(username='testSuperuser', password='testPassword')
