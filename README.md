@@ -7,3 +7,27 @@ The website consists of a default Task Manager page where users gain full access
 [Click here](https://task-manager-p4-948686f46531.herokuapp.com/) to go to the Task Manager's Live Wesbite.
 
 ![Am I responsive image](documentation/responsive.png)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Agile Methodology](#agile-methodology)
+- [User Experience (UX)](#user-experience-ux)
+  - [Strategy / Site Goals](#strategy--site-goals)
+  - [Scope / User Stories](#scope--user-stories)
+  - [Structure / Design Choices](#structure--design-choices)
+  - [Skeleton / Wireframes](#skeleton--wireframes)
+  - [Surface](#surface)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Forking the GitHub Repository](#forking-the-github-repository)
+  - [Creating a Local Clone](#creating-a-local-clone)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
+[Back To Top](#Task-Manager)
