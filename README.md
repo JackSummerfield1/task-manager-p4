@@ -31,3 +31,13 @@ The website consists of a default Task Manager page where users gain full access
 - [Acknowledgements](#acknowledgements)
 
 [Back To Top](#Task-Manager)
+
+---
+
+## Overview
+
+Task Manager is a responsive website, prioritising mobile users. It is compatible with all current major browsers. The website is built for educational purposes, using Bootstrap and the Django framework.
+
+It gives users the ability to complete simple variations of registration (login/signup) and includes full CRUD functionality.
+
+[Back To Top](#table-of-contents)
