@@ -51,3 +51,15 @@ The plan for this project was carried out using Agile Methodology. GitHub Issues
 Each User Story contains Acceptance Criteria which I sometimes had to change after I did the process as it didn't meet the criteria I initially aimed for.
 
 [Here](https://github.com/users/JackSummerfield1/projects/3) is also a link to my KanBan board.
+
+---
+
+## User Experience (UX)
+
+### Strategy / Site Goals
+
+This Task Manager Website provides a secure and efficient platform for users to manage their tasks. The website allows logged-in users to perform CRUD (Create, Read, Update, Delete) operations on their tasks. User authentication ensures data privacy, and the platform supports role-specific functionalities for users, administrators, and developers.
+
+---
+
+### Scope / User Stories
