@@ -118,3 +118,45 @@ Wireframes were first sketched on paper and then found some ones that were more 
 ![Task-CRUD-Wireframes](documentation/task-crud-wire.png)
 
 ## Features
+
+**User Authentication:**
+
+- Secure user login and logout functionality.
+  Ensures tasks are only accessible to their respective users.
+
+**Task Management:**
+
+- Create, view, update, and delete tasks easily.
+- Each task includes details like title, description, deadline, priority, and completion status.
+
+**Priority Levels:**
+
+- Assign tasks a priority level (Low, Medium, High) to manage workload effectively.
+
+**Completion Tracking:**
+
+- Mark tasks as completed to stay organized and track progress.
+
+**Deadlines:**
+
+- Optional deadlines to help users manage time-sensitive tasks.
+
+**Personalized Task Lists:**
+
+- Users can view a filtered list of tasks specific to their account.
+
+**Responsive Notifications:**
+
+- Success messages after creating, updating, or deleting tasks provide instant feedback.
+
+**Mobile-Friendly Design:**
+
+- Optimized for use on mobile and desktop devices, ensuring accessibility on the go.
+
+**Confirmation for Deletions:**
+
+- A confirmation page ensures users don't accidentally delete tasks.
+
+**Secure Data Management:**
+
+- Tasks are tied to individual user accounts, preventing unauthorized access.
