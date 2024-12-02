@@ -398,3 +398,19 @@ More information on Creating and Managing repositories can be found [here](https
 </details>
 
 [Back To Top](#table-of-contents)
+
+## Credits
+
+**Gemini AI:** For assisting with writing and refining the form/view tests, ensuring robust test coverage for all critical application features.
+
+**ChatGPT:** For debugging code and providing clear explanations of Django views, models, and functionality, helping streamline development.
+
+**YouTube Tutorials:** For guidance on styling Django form fields and enhancing the user interface of the application.
+
+**Code Institute's Codestar Blog Walkthrough Project:** For overall inspiration and support in structuring the application and following best practices in Django development.
+
+These resources were invaluable in building a functional and well-designed task management application.
+
+- Any specific videos used have been linked directly into the code.
+
+[Back To Top](#table-of-contents)
