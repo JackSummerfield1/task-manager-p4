@@ -63,3 +63,25 @@ This Task Manager Website provides a secure and efficient platform for users to 
 ---
 
 ### Scope / User Stories
+
+**As an admin**
+
+- I can manager user accounts so that I can maintain the system's integrity.
+
+- I can monitor user tasks so that I can audit and provide support when needed.
+
+**As a user**
+
+- I can log in to the task manager so that I can securely access my tasks.
+
+- I can view my list of tasks so that I can keep track of what needs to be completed.
+
+- I can create, edit, and delete tasks so that I can manage my workload.
+
+- I can log out of the system so that I can ensure security of my account and all of my tasks will be saved.
+
+**As a developer**
+
+- I can implement new features so that the system stays up-to-date and meets user needs.
+
+- I can debug and maintain the codebase so that the platform runs quickly and efficiently.
