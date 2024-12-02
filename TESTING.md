@@ -10,7 +10,7 @@ I have completed a series of manual and automated tests to:
 ## Table of Contents
 
 - [Automated-Testing](#automated-testing)
-- [Manual-Testing]
+- [Manual-Testing](#manual-testing)
 
 [Back To Top](#Testing)
 
