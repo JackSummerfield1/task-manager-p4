@@ -17,7 +17,6 @@ The website consists of a default Task Manager page where users gain full access
   - [Scope / User Stories](#scope--user-stories)
   - [Structure / Design Choices](#structure--design-choices)
   - [Skeleton / Wireframes](#skeleton--wireframes)
-  - [Surface](#surface)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Future Features](#future-features)
@@ -103,3 +102,19 @@ Only one custom model has been implemented into this project.
 **ERD Diagram of the Task Model:**
 
 ![Task-Model-ERD](documentation/erd-dia.png)
+
+---
+
+### Skeleton / Wireframes
+
+Wireframes were first sketched on paper and then found some ones that were more appropriate for the structure I wanted to go with.
+
+**Registration Wireframes**
+
+![Registration-Wireframes](documentation/registration-wire.png)
+
+**Task-CRUD-Wireframes**
+
+![Task-CRUD-Wireframes](documentation/task-crud-wire.png)
+
+## Features
