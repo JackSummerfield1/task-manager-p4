@@ -174,3 +174,46 @@ Wireframes were first sketched on paper and then found some ones that were more 
 - Tasks can be filtered by keywords in the title of tasks so that users can locate them more easily when they have a large list.
 
 [Back To Top](#Task-Manager)
+
+## Technologies Used
+
+- Frontend:
+
+**HTML5:** For creating the structure and layout of web pages.
+**CSS3:** For styling and enhancing the visual appeal of the application.
+**Bootstrap:** A responsive CSS framework for building mobile-friendly and modern user interfaces.
+
+- Backend:
+
+**Python:** The primary programming language for backend logic.
+**Django:** A high-level Python web framework used for rapid development and clean, pragmatic design.
+
+- Database:
+
+**PostgreSQL:** A lightweight and default database provided by Django for local development.
+
+- Authentication:
+
+**Django’s Built-in Authentication System:** For secure user login, logout, and user-specific task management.
+
+- Messaging:
+
+**Django Messages Framework:** For displaying success, error, and confirmation messages to users.
+
+- Development Tools:
+
+**Django ORM:** For database queries and data management.
+**Gitpod** An IDE for writing, running and testing my code directly ot the browser.
+
+- Testing:
+
+**Django Test Framework:** For writing unit tests to ensure application reliability and correctness.
+
+- Version Control:
+
+**Git:** For tracking changes and collaborating during development.
+**GitHub:** For storing and sharing the project repository.
+
+- OTHER:
+
+**ChatGPT** For debugging code and assisting with writing tests.
