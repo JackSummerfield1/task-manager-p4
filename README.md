@@ -22,12 +22,10 @@ The website consists of a default Task Manager page where users gain full access
   - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-- [Bugs](#bugs)
 - [Deployment](#deployment)
   - [Forking the GitHub Repository](#forking-the-github-repository)
   - [Creating a Local Clone](#creating-a-local-clone)
 - [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
 
 [Back To Top](#Task-Manager)
 
@@ -220,7 +218,9 @@ Wireframes were first sketched on paper and then found some ones that were more 
 
 ## Testing
 
-All of my testing is in my TESTING.md file
+All of my testing is in my [TESTING.md](TESTING.md) file
+
+[Back To Top](#table-of-contents)
 
 ---
 
