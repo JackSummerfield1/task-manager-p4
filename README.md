@@ -51,6 +51,8 @@ Each User Story contains Acceptance Criteria which I sometimes had to change aft
 
 [Here](https://github.com/users/JackSummerfield1/projects/3) is also a link to my KanBan board.
 
+[Back To Top](#Task-Manager)
+
 ---
 
 ## User Experience (UX)
@@ -117,6 +119,8 @@ Wireframes were first sketched on paper and then found some ones that were more 
 
 ![Task-CRUD-Wireframes](documentation/task-crud-wire.png)
 
+[Back To Top](#Task-Manager)
+
 ## Features
 
 **User Authentication:**
@@ -160,3 +164,5 @@ Wireframes were first sketched on paper and then found some ones that were more 
 **Secure Data Management:**
 
 - Tasks are tied to individual user accounts, preventing unauthorized access.
+
+[Back To Top](#Task-Manager)
