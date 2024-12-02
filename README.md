@@ -123,6 +123,8 @@ Wireframes were first sketched on paper and then found some ones that were more 
 
 ## Features
 
+### Existing Features
+
 **User Authentication:**
 
 - Secure user login and logout functionality.
@@ -164,5 +166,11 @@ Wireframes were first sketched on paper and then found some ones that were more 
 **Secure Data Management:**
 
 - Tasks are tied to individual user accounts, preventing unauthorized access.
+
+### Future Features
+
+**Searching for Tasks**
+
+- Tasks can be filtered by keywords in the title of tasks so that users can locate them more easily when they have a large list.
 
 [Back To Top](#Task-Manager)
