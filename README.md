@@ -85,3 +85,21 @@ This Task Manager Website provides a secure and efficient platform for users to 
 - I can implement new features so that the system stays up-to-date and meets user needs.
 
 - I can debug and maintain the codebase so that the platform runs quickly and efficiently.
+
+### Structure / Design Choices
+
+The website is simple and consistent with its structure. Its structure was designed to be responsive for most devices.
+
+The Navigation menu displays Login Register options if a user is not logged in and the Logout option when logged in. This ensures access control and security is guaranteed and users can only access features once logged in.
+
+The Task List Page clearly provides a list of all the tasks associated with that user. The Add, Edit and Delete options are all clear on how to use.
+
+Confirmation messages are provided to the user when completing something. E.g. signing out, creating a task, editing a task, deleting a task etc. Ensuring the user of every option they choose to do.
+
+Only one custom model has been implemented into this project.
+
+**The Task Model** - User to Task: One-to-Many (A user can create multiple tasks):
+
+**ERD Diagram of the Task Model:**
+
+![Task-Model-ERD](documentation/erd-dia.png)
