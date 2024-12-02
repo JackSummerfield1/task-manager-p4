@@ -41,3 +41,13 @@ Task Manager is a responsive website, prioritising mobile users. It is compatibl
 It gives users the ability to complete simple variations of registration (login/signup) and includes full CRUD functionality.
 
 [Back To Top](#table-of-contents)
+
+---
+
+## Agile Methodology
+
+The plan for this project was carried out using Agile Methodology. GitHub Issues, which can be viewed [here](https://github.com/JackSummerfield1/task-manager-p4/issues?q=is%3Aissue+is%3Aclosed), were used to recored the User Stories.
+
+Each User Story contains Acceptance Criteria which I sometimes had to change after I did the process as it didn't meet the criteria I initially aimed for.
+
+[Here](https://github.com/users/JackSummerfield1/projects/3) is also a link to my KanBan board.
